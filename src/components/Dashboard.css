@@ -1,0 +1,92 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 100px;
+  background-color: rgb(206, 163, 206);
+  align-items: center;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 30px;
+}
+
+.grid_item {
+  border: 1px solid gray;
+  border-radius: 5px;
+  height: 60vh;
+  padding: 20px 5px;
+  text-align: center;
+}
+.grid_item:hover {
+  background-color: goldenrod;
+  color: white;
+  transform: scale(1.02);
+}
+.movie-image {
+  height: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 10px;
+}
+
+.menu_section {
+  float: right;
+  background-color: white;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 20px;
+  height: 100vh;
+  border-radius: 5px;
+  animation: come 0.5s ease-in;
+}
+.genre_button {
+  all: unset;
+  cursor: pointer;
+  padding: 10px;
+}
+.menu_button {
+  width: 50px;
+}
+
+.menu_button > img {
+  width: 100%;
+}
+
+.genre_button:hover {
+  background-color: rgba(0, 0, 0, 0.692);
+  color: white;
+}
+
+.page_button {
+  border: 1px solid black;
+  background-color: cornflowerblue;
+  border-radius: 5px;
+
+  color: white;
+}
+
+.page_button :hover {
+  transform: scale(1.1);
+}
+
+.page_nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 5px;
+}
+
+@keyframes come {
+  from {
+    transform: translate(100%, 0%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
