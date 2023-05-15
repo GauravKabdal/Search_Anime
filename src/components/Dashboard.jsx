@@ -132,7 +132,7 @@ const Dashboard = () => {
   return (
     <>
       <header>
-        <h1>MovieApp</h1>
+        <h1>SearchAnime</h1>
         <div>
           <input
             type="text"
