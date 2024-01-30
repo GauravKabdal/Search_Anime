@@ -45,6 +45,7 @@ header {
 
 .grid_item {
   border: 1px solid gray;
+  font-size: medium;
   border-radius: 5px;
   height: 60vh;
   padding: 20px 5px;
@@ -55,8 +56,7 @@ header {
   background-color: rgb(137, 137, 221);
   color: white;
 
-  font-size: large;
-  height: 62vh;
+  transform: scale(1.1);
 }
 .movie-image {
   height: 70%;
@@ -140,5 +140,101 @@ header {
   }
   to {
     transform: translate(0%, 0%);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+  }
+
+  .menu_section {
+    float: right;
+    background-color: rgb(221, 211, 211);
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+    height: 100vh;
+    border-radius: 5px;
+    animation: come 0.7s ease-in;
+    width: 30vw;
+    padding-top: 20px;
+    justify-content: flex-start;
+  }
+  .grid_item {
+    border: 1px solid gray;
+    font-size: medium;
+    border-radius: 5px;
+    height: 70vh;
+    padding: 20px 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+  }
+
+  #applogo {
+    font-size: medium;
+  }
+
+  .menu_section {
+    float: right;
+    background-color: rgb(221, 211, 211);
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+    height: 100vh;
+    border-radius: 5px;
+    animation: come 0.7s ease-in;
+    width: 40vw;
+    padding-top: 20px;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .grid_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    align-items: center;
+  }
+
+  #applogo {
+    font-size: larger;
+  }
+
+  .search_container {
+    display: none;
+  }
+
+  .menu_section {
+    float: right;
+    background-color: rgb(221, 211, 211);
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+    height: 100vh;
+    border-radius: 5px;
+    animation: come 0.7s ease-in;
+    width: 60vw;
+    padding-top: 20px;
+    justify-content: flex-start;
   }
 }
