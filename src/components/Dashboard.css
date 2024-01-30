@@ -1,9 +1,13 @@
 header {
   display: flex;
-  justify-content: space-between;
-  padding: 15px 100px;
-  background-color: rgb(206, 163, 206);
+  justify-content: space-around;
+  padding: 10px 0px;
+  background-color: rgb(202, 180, 202);
   align-items: center;
+  top: 0;
+  align-content: center;
+  position: sticky;
+  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.6);
 }
 
 .grid_container {
@@ -13,17 +17,46 @@ header {
   padding: 30px;
 }
 
+.search_box {
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  outline: none;
+  background-color: ghostwhite;
+}
+
+#search_button {
+  border: none;
+  padding: 10px;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+#search_button:hover {
+  background-color: rgb(85, 85, 211);
+  color: white;
+  transform: scale(1.1);
+}
+
+#applogo {
+  text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
 .grid_item {
   border: 1px solid gray;
   border-radius: 5px;
   height: 60vh;
   padding: 20px 5px;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .grid_item:hover {
-  background-color: goldenrod;
+  background-color: rgb(137, 137, 221);
   color: white;
-  transform: scale(1.02);
+
+  font-size: large;
+  height: 62vh;
 }
 .movie-image {
   height: 70%;
@@ -35,15 +68,18 @@ header {
 
 .menu_section {
   float: right;
-  background-color: white;
+  background-color: rgb(221, 211, 211);
   transition: all 0.5s;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   padding: 10px 20px;
   height: 100vh;
   border-radius: 5px;
-  animation: come 0.5s ease-in;
+  animation: come 0.7s ease-in;
+  width: 20vw;
+  padding-top: 20px;
+  justify-content: flex-start;
 }
 .genre_button {
   all: unset;
@@ -51,24 +87,40 @@ header {
   padding: 10px;
 }
 .menu_button {
-  width: 50px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.menu_button:hover {
+  transform: scale(1.2);
 }
 
 .menu_button > img {
-  width: 100%;
+  width: 80%;
+  padding: 4px;
 }
 
 .genre_button:hover {
-  background-color: rgba(0, 0, 0, 0.692);
+  background-color: rgb(137, 137, 221);
   color: white;
+  font-size: medium;
 }
 
 .page_button {
-  border: 1px solid black;
-  background-color: cornflowerblue;
+  background-color: rgb(85, 85, 211);
   border-radius: 5px;
-
   color: white;
+  padding: 7px;
+  border: none;
+  transition: 0.7s;
+}
+
+.page_button:hover {
+  transform: scale(1.1);
 }
 
 .page_button :hover {

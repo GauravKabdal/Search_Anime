@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
-import menu from "../assets/menu_button.png";
+import menu from "../assets/menu_button.svg";
 import Modal from "./Modal";
 import Error from "./Error";
 import Loader from "./Loader";
@@ -132,17 +132,22 @@ const Dashboard = () => {
   return (
     <>
       <header>
-        <h1>SearchAnime</h1>
-        <div>
+        <h1 id="applogo">
+          Search<span style={{ color: "rgb(85, 85, 211)" }}>Anime</span>
+        </h1>
+        <div className="search_container">
           <input
             type="text"
+            className="search_box"
             placeholder="Search by movie titles...."
             value={searchItem}
             onChange={(event) => {
               setSearchItem(event.target.value);
             }}
           />
-          <button onClick={handleSearch}>Search</button>
+          <button onClick={handleSearch} id="search_button">
+            Search
+          </button>
         </div>
         <button onClick={toggleMenu} className="menu_button">
           <img src={menu} alt="" />
@@ -175,12 +180,12 @@ const Dashboard = () => {
         <section className="page_nav">
           {currentPage - 1 > 0 && (
             <button onClick={handlePrevPage} className="page_button">
-              Previous
+              Previous Page {"<"}
             </button>
           )}
           {currentPage + 1 < 5 && (
             <button onClick={handleNextPage} className="page_button">
-              Next
+              Next Page {">"}
             </button>
           )}
         </section>
